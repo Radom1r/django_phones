@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Каталог{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="header">
+            <h1><a href="/catalog">Каталог</a></h1>
+        </div>
+
+        <div class="sort-block">
+            {# Здесь должен быть раздел с сортировкой #}
+        </div>
+
+        <div class="content">
+            {% for phone in phones %}
+            <br> <img src=”{{phone}}"> </br>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
