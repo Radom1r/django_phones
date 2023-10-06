@@ -8,5 +8,5 @@ class Phone(models.Model):
     lte_exists = models.BooleanField()
     slug = models.SlugField(max_length=200)
 
-    def __str__(self):
-        return f'{self.image}">'
+    # def __str__(self):
+    #     return [self.id, self.name, self.price, self.release_date.isoformat(), self.image]

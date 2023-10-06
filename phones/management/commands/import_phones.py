@@ -2,6 +2,8 @@ import csv
 
 from django.core.management.base import BaseCommand
 from phones.models import Phone
+from django.template.defaultfilters import slugify
+
 
 
 class Command(BaseCommand):
@@ -22,5 +24,5 @@ class Command(BaseCommand):
     image=line[2],
     release_date=line[4],
     lte_exists=line[5],
-    slug=line[1].replace(' ', '-'))
+    slug=slugify(line[1]))
                 phone.save()
